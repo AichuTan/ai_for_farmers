@@ -1,0 +1,42 @@
+# Streamlit Web App
+streamlit
+python-dotenv
+
+# Core ML/Data Tools
+pandas
+numpy
+scikit-learn
+scipy
+tqdm
+matplotlib
+Pillow
+
+# Deep Learning & Vision
+torch
+torchvision
+torchaudio
+opencv-python
+ultralytics
+
+# NLP / Transformers
+openai
+sentence-transformers
+transformers
+
+# LangChain Stack
+langchain
+langchain-community
+langchain-openai
+
+# Networking / async
+requests
+aiohttp
+httpx
+tenacity
+
+# Visualization
+altair
+pydeck
+
+# Optional integrations
+huggingface-hub

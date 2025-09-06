@@ -1,29 +1,35 @@
-/* style.css */
-body {
-  background-color: #f1f8f6;
-}
-
+/* hero polish */
 .hero {
-  background-color: #4caf50;
-  padding: 2rem;
-  text-align: center;
-  color: white;
-  border-radius: 10px;
-  margin-bottom: 30px;
+  padding: 24px 28px;
+  background: #7bbac0;
+  color: #fff;
+  border-radius: 16px;
+  margin-bottom: 18px;
+}
+.hero h1 {
+  margin: 0 0 6px 0;
 }
 
-.card {
-  background-color: white;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  height: 100%;
+/* tidy image cards */
+.stImage > img {
+  border-radius: 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
 }
 
-.footer {
-  font-size: 0.9rem;
-  text-align: center;
-  margin-top: 3rem;
-  color: gray;
+/* make left step sticky on wide viewports */
+@media (min-width: 1200px) {
+  .sticky-left {
+    position: sticky;
+    top: 16px;
+  }
+}
+
+/* subtle “chip” */
+.chip {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #22c55e;
+  font-weight: 600;
+  margin-right: 8px;
 }

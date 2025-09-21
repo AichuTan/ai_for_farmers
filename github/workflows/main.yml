@@ -22,13 +22,13 @@ jobs:
 
       - name: Push to Space (force mirror)
         env:
-          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          HF_TOKEN: ${{ secrets.AIFARMER_TOKEN }}
           SPACE_URL: https://huggingface.co/spaces/aycu2004/ai_for_farmer
           SPACE_BRANCH: main
         run: |
           # refresh remote refs to avoid "stale info"
           git remote remove hub 2>/dev/null || true
-          git remote add hub "https://__token__:${HF_TOKEN}@huggingface.co/spaces/aycu2004/ai_for_farmer"
+          git remote add hub "https://__token__:${AIFARMER_TOKEN}@huggingface.co/spaces/aycu2004/ai_for_farmer"
           git fetch hub $SPACE_BRANCH || true
           # push current commit to Space branch, overwriting Space
           git push --force-with-lease hub HEAD:$SPACE_BRANCH

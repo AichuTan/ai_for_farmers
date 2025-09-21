@@ -5,14 +5,15 @@ import tempfile
 import streamlit as st
 import pandas as pd
 from PIL import Image, ImageOps
-
+print('test')
+print('test')
 # Your inference utils (unchanged import path)
 from utils.inference import detect_disease, get_all_disease_classes  # noqa: F401 (keep if you expose classes later)
 
 # ──────────────────────────────────────────────────────────────────────────────
 # PAGE CONFIG
 # ──────────────────────────────────────────────────────────────────────────────
-st.set_page_config(page_title="AI for Farmers", layout="wide")
+st.set_page_config(page_title="AI for Farmers", layout="wide", initial_sidebar_state="collapsed")
 
 # ──────────────────────────────────────────────────────────────────────────────
 # HELPERS & CACHES
@@ -143,14 +144,6 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-with st.container():
-    st.markdown("<div class='sticky-status'>", unsafe_allow_html=True)
-    s1, s2, s3 = st.columns(3)
-    s1.markdown(f"**① Upload** {'✅' if has_img else ''}")
-    s2.markdown(f"**② Detect** {'✅' if has_result else ''}")
-    s3.markdown(f"**③ Recommend** {'✅' if has_result else ''}")
-    st.markdown("</div>", unsafe_allow_html=True)
-
 
 # ──────────────────────────────────────────────────────────────────────────────
 # MAIN LAYOUT: STICKY LEFT (Wizard rail) + RIGHT (Tabs)
@@ -275,7 +268,7 @@ with right:
         with tab_preview:
             preview = st.session_state.get("input_image")
             if preview is not None:
-                st.image(preview, caption="Uploaded Image", width=400)
+                st.image(preview, caption="Uploaded Image", width=500)
             elif st.session_state.get("input_video") is not None:
                 st.video(st.session_state["input_video"])
                 st.info("Sample a frame on the left, then run detection.")
@@ -286,7 +279,7 @@ with right:
         with tab_detections:
             annotated = result.get("annotated_image")
             if annotated is not None:
-                st.image(annotated, caption="Detected Regions (YOLO)", width=400)
+                st.image(annotated, caption="Detected Regions (YOLO)", width= 500)
                 # Optional: render a detections table if your result provides it
                 dets = result.get("detections") or result.get("predictions")
                 if dets:
@@ -397,10 +390,26 @@ with right:
 # ──────────────────────────────────────────────────────────────────────────────
 st.markdown("""
 <hr style="margin-top: 2rem; margin-bottom: 1rem;">
-<div style='text-align: center; color: gray; font-size: 0.85em'>
-  © 2025 <strong>AI for Farmers</strong> — San Diego State University · 
-  <a href="https://github.com/your-github-username" target="_blank" style="color: teal; text-decoration: none;"> My Portfolio</a> · 
-  <a href="mailto:thedebbietan@gmail.com" style="color: teal; text-decoration: none;">Contact</a>
+<div style='text-align: center; color: gray; font-size: 0.85em; line-height: 1.6;'>
+  © 2025 <strong>AI for Farmers</strong><br>
+  Author: <a href="https://aichutan.github.io/" target="_blank" style="color: teal; text-decoration: none;">
+  Aichu Tan</a><br>
+  Supervisors: <strong>Dominico &amp; G. Fernandez</strong><br>
+  Affiliation: 
+  <a href="https://metabolismofcities-llab.org/metabolism-of-cities-living-lab-moc-llab/" target="_blank" style="color: teal; text-decoration: none;">
+    Metabolism of Cities Living Lab
+  </a>, 
+  <a href="https://www.sdsu.edu/" target="_blank" style="color: teal; text-decoration: none;">
+    San Diego State University
+  </a><br>
+  Presented at the <a href="https://onehealthconference.it/" target="_blank" style="color: teal; text-decoration: none;">
+  4th International One Health Conference, Rome Italy 2025</a>
 </div>
 """, unsafe_allow_html=True)
 
+
+st.markdown("""
+<div style='text-align:center; color: gray; font-size: 0.8em; margin-top: 1rem;'>
+  Licensed under the <a href="https://opensource.org/licenses/MIT" target="_blank" style="color: teal; text-decoration: none;">MIT License</a>
+</div>
+""", unsafe_allow_html=True)

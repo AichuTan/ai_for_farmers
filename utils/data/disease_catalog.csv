@@ -1,19 +1,265 @@
 plant_type,disease,prevention,treatment
-Cashew,Anthracnose,Use resistant varieties; avoid overhead irrigation,Apply copper-based fungicides
-Cashew,Gumosis,Maintain tree health; avoid mechanical injury,Apply fungicides and improve drainage
-Cashew,Leaf Miner,Remove infested leaves; promote natural predators,Use systemic insecticides if necessary
-Cashew,Red Rust,Prune infected twigs; maintain field hygiene,Apply appropriate fungicides like mancozeb
-Cassava,Bacterial Blight,Use disease-free planting material; rotate crops,Spray copper-based bactericides
-Cassava,Brown Spot,Plant resistant varieties; remove infected leaves,Apply protective fungicides like chlorothalonil
-Cassava,Green Mite,Encourage predatory mites; weed control,Use acaricides or neem oil
-Cassava,Mosaic,Use virus-free cuttings; control whiteflies,Remove and destroy infected plants
-Maize,Fall Armyworm,Plant early; monitor crops regularly,Apply insecticides like spinosad or Bt
-Maize,Grasshopper,Use biopesticides and traps,Spray recommended insecticides during outbreaks
-Maize,Leaf Beetle,Use crop rotation; keep field clean,Apply insecticides when population is high
-Maize,Leaf Blight,Use resistant varieties; ensure good airflow,Apply fungicides such as azoxystrobin
-Maize,Leaf Spot,Rotate crops; maintain soil health,Use foliar fungicides like mancozeb
-Maize,Streak Virus,Control leafhoppers; use resistant varieties,No direct cure—focus on prevention and vector control
-Tomato,Leaf Blight,Avoid wetting foliage; practice crop rotation,Use fungicides like chlorothalonil
-Tomato,Leaf Curl,Control whiteflies; use virus-resistant varieties,Remove infected plants immediately
-Tomato,Septoria Leaf Spot,Water early in day; use mulch,Apply fungicides like copper or chlorothalonil
-Tomato,verticulium wilt,Use resistant varieties; rotate with non-host crops,No chemical treatment—remove and destroy infected plants
+Cashew,Anthracnose,"- Inspect cashew trees for any signs of anthracnose regularly.
+- Remove and destroy infected leaves and branches immediately.
+- Prune trees to improve air circulation and sunlight exposure.
+- Plant cashew trees at recommended spacing to reduce humidity.
+- Rotate cashew crops with other non-related plants to break disease cycles.
+- Use disease-resistant cashew varieties if available in your area.","Non-chemical:
+- Remove and destroy infected leaves and branches.
+- Prune to improve airflow and sunlight penetration.
+
+Chemical:
+- Copper fungicide — when: first signs of anthracnose; interval: every 14 days; note: Follow label instructions and wear PPE.
+
+Seek help when:
+- The infection spreads rapidly despite treatment.
+- Unsure about the effectiveness of the chosen treatment."
+Cashew,Gumosis,"- Plant resistant dwarf cashew varieties.
+- Prune infected branches immediately.
+- Remove and destroy infected plant parts.
+- Ensure proper drainage to avoid waterlogging.
+- Space cashew trees adequately for good air circulation.
+- Rotate cashew crops with non-related plants to reduce disease buildup.","Non-chemical:
+- Remove and destroy infected plant material promptly.
+- Prune affected branches to healthy tissue.
+
+Chemical (last option):
+- Copper fungicide — when: signs of gummosis appear; interval: as directed on the product label; note: Follow label instructions and wear PPE.
+
+Seek help when:
+- Gummosis symptoms persist despite treatment efforts."
+Cashew,Leaf Miner,"- Inspect cashew trees for signs of leaf miner damage regularly.
+- Remove and destroy infested leaves and branches promptly.
+- Prune affected branches to improve air circulation.
+- Plant cashew trees at appropriate distances to reduce pest spread.
+- Introduce natural predators like beneficial insects to control leaf miners.
+- Rotate cashew crops with other non-host plants to disrupt the pest's life cycle.","Non-chemical:
+- Remove and destroy infested leaves regularly.
+- Maintain good plant hygiene by cleaning fallen leaves and debris.
+
+Chemical:
+- Chlorpyriphos or profenophos — when: infestation is severe; interval: every 10-14 days; note: Follow label instructions and wear PPE.
+
+Seek help when:
+- Infestation persists despite treatment efforts.
+- Damage is spreading rapidly and affecting a large portion of the cashew plantation."
+Cashew,Red Rust,"- Inspect cashew trees for red rust symptoms weekly.
+- Remove and destroy infected leaves and branches immediately.
+- Prune trees to improve air circulation and sunlight exposure.
+- Plant resistant cashew varieties if available in your region.
+- Maintain proper spacing between trees to reduce humidity and spread of the disease.
+- Rotate cashew crops with other non-related plants to break the disease cycle.","Non-chemical:
+- Remove and destroy infected cashew nuts.
+- Prune affected branches to improve airflow around the trees.
+
+Chemical (last option):
+- Azoxystrobin — when: at first signs of Cashew Red Rust; interval: every 14 days; note: Follow label instructions and wear PPE.
+
+Seek help when:
+- The infection spreads rapidly despite treatment efforts."
+Cassava,Bacterial Blight,"- Plant resistant cassava cultivars to prevent Bacterial Blight.
+- Rotate crops to reduce the risk of disease spread.
+- Clean equipment that touches infected plants to avoid spreading the disease.
+- Remove and destroy infected plant material promptly.
+- Space cassava plants properly to improve air circulation.
+- Train farmers on early detection and management of Bacterial Blight.","Non-chemical:
+- Remove and destroy infected plant material.
+- Practice crop rotation to prevent disease buildup.
+
+Chemical:
+- Copper-based fungicide — when: signs of bacterial blight appear; interval: as directed on the product label; note: Follow label instructions and wear PPE.
+
+Seek help when:
+- Disease symptoms are widespread and not improving with treatment.
+- Unsure about the effectiveness of the chosen treatment methods."
+Cassava,Brown Spot,"- Plant resistant cassava varieties.
+- Space plants properly to allow for good air circulation.
+- Remove and destroy infected plant parts immediately.
+- Practice crop rotation to reduce disease buildup in the soil.
+- Inspect cassava plants regularly for early signs of brown spot.
+- Ensure proper drainage to prevent waterlogging.","Non-chemical:
+- Remove and destroy infected plant material.
+- Prune affected parts of the cassava plant.
+- Increase spacing between cassava plants for better airflow.
+
+Chemical:
+- Copper fungicide — when: brown spots first appear; interval: every 10–14 days; note: Follow label instructions and wear PPE.
+
+Seek help when:
+- Symptoms worsen despite treatment efforts.
+- Unsure about the effectiveness of the chosen treatment methods."
+Cassava,Green Mite,"- Plant a variety of cassava types to avoid having only one kind.
+- Inspect cassava plants weekly for any signs of mites.
+- Remove and destroy any infested plant tips immediately.
+- Space cassava plants adequately to prevent mites from spreading easily.
+- Rotate cassava crops with other non-related plants to disrupt mite life cycles.
+- Encourage natural predators like ladybugs by planting flowers nearby.","Non-chemical:
+- Remove and destroy infected cassava leaves.
+- Increase spacing between cassava plants for better airflow.
+
+Chemical (last option):
+- Miticides — when mites are present; interval: every 7–10 days; note: Follow label instructions and wear PPE.
+
+Seek help when:
+- Infestation is widespread and not improving with treatments."
+Cassava,Mosaic,"- Clean planting materials thoroughly before planting.
+- Plant resistant cassava varieties.
+- Space cassava plants appropriately to reduce disease spread.
+- Remove and destroy infected cassava plants immediately.
+- Rotate cassava crops with other non-related plants.
+- Train in proper phytosanitary practices regularly.","Non-chemical:
+- Remove and destroy infected cassava plants.
+- Practice crop rotation to reduce disease pressure.
+
+Chemical (last option):
+- Copper fungicide — when: disease symptoms first appear; interval: as directed on the product label; note: Follow label instructions and wear PPE.
+
+Seek help when:
+- Disease symptoms are spreading rapidly despite treatment efforts."
+Maize,Fall Armyworm,"- Plant maize early to avoid peak fall armyworm infestation periods.
+- Rotate maize with other crops to disrupt fall armyworm life cycles.
+- Remove and destroy crop residues after harvest to reduce overwintering sites.
+- Use pheromone traps to monitor fall armyworm populations.
+- Intercrop maize with plants that repel fall armyworms.
+- Implement physical barriers like row covers to protect maize from fall armyworm damage.","Non-chemical:
+- Remove and destroy infected plant material.
+- Encourage natural predators like birds and beneficial insects.
+
+Chemical:
+- Spinosad — when: Fall Armyworm presence is confirmed; interval: Follow label instructions; note: Follow label instructions and wear PPE.
+
+Seek help when:
+- Infestation is widespread and not controlled by initial measures.
+- Unsure about the identification of Fall Armyworm."
+Maize,Grasshopper,"- Clear weeds and debris around the maize field.
+- Plant trap crops to divert grasshoppers away from maize.
+- Rotate maize with non-host crops to disrupt grasshopper breeding.
+- Use physical barriers like nets or row covers to protect maize plants.
+- Introduce natural predators like birds or beneficial insects.
+- Encourage biodiversity in the area to create a balanced ecosystem that controls grasshopper populations.","Non-chemical:
+- Remove tall grass and weeds around the maize field to reduce grasshopper habitat.
+- Introduce beneficial insects like ladybugs or lacewings that feed on grasshopper eggs.
+
+Chemical:
+- Spinosad — when: grasshopper populations exceed 10 per plant; interval: every 7–10 days; note: Follow label instructions and wear PPE.
+
+Seek help when:
+- Grasshopper populations continue to increase despite non-chemical and chemical treatments."
+Maize,Leaf Beetle,"- Plant maize varieties resistant to Maize Leaf Beetle.
+- Rotate maize crops with non-host plants like legumes.
+- Remove and destroy crop residues after harvest.
+- Inspect maize plants weekly for beetle presence.
+- Handpick beetles and eggs from leaves.
+- Introduce natural predators like ladybugs to control beetle populations.","Non-chemical:
+- Remove and destroy infected maize leaves.
+- Introduce beneficial insects like ladybugs to control leaf beetle populations.
+
+Chemical:
+- Spinosad — when: beetle presence is high; interval: every 7–10 days; note: Follow label instructions and wear PPE.
+
+Seek help when:
+- Beetle infestation is widespread and causing significant damage.
+- Non-chemical and chemical control methods have not effectively reduced leaf beetle populations."
+Maize,Leaf Blight,"- Plant resistant maize varieties.
+- Rotate maize crops with other non-related plants.
+- Remove and destroy infected plant debris.
+- Space maize plants adequately for good air circulation.
+- Inspect maize leaves regularly for early signs of blight.
+- Practice good field sanitation to reduce disease spread.","Non-chemical:
+- Remove and destroy infected plant material.
+- Practice crop rotation to reduce disease pressure.
+
+Chemical (last option):
+- Mancozeb — when: at first signs of disease; interval: as needed; note: Follow label instructions and wear PPE.
+
+Seek help when:
+- Disease symptoms persist despite treatment efforts."
+Maize,Leaf Spot,"- Plant disease-resistant maize varieties.
+- Rotate maize crops with non-host plants.
+- Remove and destroy infected plant debris.
+- Space maize plants adequately for good air circulation.
+- Inspect maize leaves regularly for early signs of leaf spot.
+- Practice good field sanitation by cleaning tools and equipment.","Non-chemical:
+- Remove and destroy infected plant material.
+- Increase spacing between plants for better airflow.
+
+Chemical:
+- Fungicides with the active ingredient <insert active ingredient> — when: disease severity reaches 2–3%; interval: as directed on the label; note: Follow label instructions and wear PPE.
+
+Seek help when:
+- Disease continues to spread despite treatment efforts."
+Maize,Streak Virus,"- Plant virus-resistant maize varieties.
+- Remove and burn infected plants immediately.
+- Space maize plants adequately to reduce virus spread.
+- Rotate maize crops with non-host plants.
+- Inspect maize plants weekly for virus symptoms.
+- Seek advice from local agricultural extension services for further guidance.","Non-chemical:
+- Remove and burn infected maize plants to prevent spread.
+- Maintain good spacing between plants for better airflow.
+
+Chemical (last option):
+- Neem oil — when: virus symptoms appear; interval: as needed; note: Follow label instructions and wear PPE.
+
+Seek help when:
+- The virus is spreading despite treatment efforts.
+- Unsure about the effectiveness of the chosen treatment methods."
+Tomato,Leaf Blight,"- Inspect tomato plants weekly for early signs of blight.
+- Remove and destroy infected leaves immediately.
+- Space tomato plants adequately for good air circulation.
+- Mulch around plants to prevent soil splashing onto leaves.
+- Rotate tomato crops yearly to prevent disease buildup in the soil.
+- Plant disease-resistant tomato varieties when possible.","Non-chemical:
+- Remove and destroy infected plant material promptly.
+- Ensure good spacing between plants for proper airflow.
+
+Chemical (last option):
+- Copper fungicide — when: at first signs of leaf blight; interval: every 7–10 days; note: Follow label instructions and wear PPE.
+
+Seek help when:
+- Symptoms persist despite treatment efforts.
+- Unsure about the correct identification of leaf blight."
+Tomato,Leaf Curl,"- Plant resistant tomato varieties.
+- Remove and destroy infected plants promptly.
+- Use reflective mulch to deter whiteflies.
+- Keep the garden area clean and free of weeds.
+- Rotate tomato crops with non-solanaceous plants.
+- Inspect plants regularly for early signs of leaf curl.","Non-chemical:
+- Remove and destroy infected plant material promptly.
+- Maintain proper spacing between tomato plants for good airflow.
+- Introduce beneficial insects like ladybugs or lacewings to control pests.
+
+Chemical:
+- Neem oil — when: at the first sign of leaf curl; interval: every 7–10 days; note: Follow label instructions and wear PPE.
+
+Seek help when:
+- Leaf curl symptoms persist despite treatment efforts.
+- The infestation is spreading rapidly despite control measures."
+Tomato,Septoria Leaf Spot,"- Plant resistant tomato varieties to Septoria leaf spot.
+- Space tomato plants properly for good air circulation.
+- Remove and destroy infected leaves as soon as they are noticed.
+- Mulch around tomato plants to prevent soil splashing onto leaves.
+- Rotate tomato crops with non-related plants to break disease cycle.
+- Inspect tomato plants weekly for early signs of Septoria leaf spot.","Non-chemical:
+- Remove infected leaves and stems promptly.
+- Ensure good spacing between plants for airflow.
+
+Chemical (last option):
+- Copper fungicide — when: signs of Septoria leaf spot appear; interval: every 7–10 days; note: Follow label instructions and wear PPE.
+
+Seek help when:
+- Disease continues to spread despite treatment efforts."
+Tomato,verticulium wilt,"- Rotate tomato crops with non-solanaceous plants yearly.
+- Plant resistant tomato varieties.
+- Space tomato plants adequately for good air circulation.
+- Remove and destroy infected plant debris promptly.
+- Inspect tomato plants for wilt symptoms weekly.
+- Prune lower leaves of tomato plants to reduce soil splash.","Non-chemical:
+- Remove and destroy infected plant material promptly.
+- Ensure proper spacing between tomato plants for good airflow.
+
+Chemical:
+- Borax — when: at first sign of wilt; interval: drench every 15 days for a total of 4 times; note: Follow label instructions and wear PPE.
+
+Seek help when:
+- The disease is spreading rapidly despite treatments.
+- Unsure about the correct application method or dosage."

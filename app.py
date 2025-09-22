@@ -212,17 +212,19 @@ with left:
                     st.session_state["input_video"] = None
                     
                 
-                st.caption("Or download our demo images:")
+                st.caption("Or download our demo images:")              
                 st.markdown(
-                    """
-                    <a href="leaf_samples.zip" download>
-                        <button style="padding:6px 14px; background-color:teal; color:white; border:none; border-radius:6px;">
-                            Download sample pack (ZIP)
-                        </button>
-                    </a>
-                    """,
-                    unsafe_allow_html=True,
-                )
+                """
+                <a href="leaf_samples.zip\n" download>
+                    <button style="padding:6px 14px; background-color:teal; color:white; border:none; border-radius:6px;">
+                        Download sample pack (ZIP)
+                    </button>
+                </a>
+                """,
+                unsafe_allow_html=True,
+            )
+                
+
 
             else:
                 vid_file = st.file_uploader(
@@ -268,6 +270,8 @@ with left:
                     st.error(f"Detection failed: {e}")
                 st.session_state["detection_result"] = result
             st.toast("Detection complete", icon="✅")
+            
+
 
     # Helpful tips (collapsible)
     with st.expander("Tips for best results", expanded=False):
@@ -432,9 +436,9 @@ st.markdown("""
 <hr style="margin-top: 2rem; margin-bottom: 1rem;">
 <div style='text-align: center; color: gray; font-size: 0.85em; line-height: 1.6;'>
   © 2025 <strong>AI for Farmers</strong><br>
-  Author: <a href="https://aichutan.github.io/" target="_blank" style="color: teal; text-decoration: none;">
+  Author: <a href="https://www.linkedin.com/in/aichutan/" target="_blank" style="color: teal; text-decoration: none;">
   Aichu Tan</a><br>
-  Supervisors: <strong>Dominico &amp; G. Fernandez</strong><br>
+  Supervisors: <strong>Dominico Vito &amp; G. Fernandez</strong><br>
   Affiliation: 
   <a href="https://metabolismofcities-llab.org/metabolism-of-cities-living-lab-moc-llab/" target="_blank" style="color: teal; text-decoration: none;">
     Metabolism of Cities Living Lab

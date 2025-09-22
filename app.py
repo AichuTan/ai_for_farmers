@@ -437,8 +437,8 @@ st.markdown("""
 <div style='text-align: center; color: gray; font-size: 0.85em; line-height: 1.6;'>
   © 2025 <strong>AI for Farmers</strong><br>
   Author: <a href="https://www.linkedin.com/in/aichutan/" target="_blank" style="color: teal; text-decoration: none;">
-  Aichu Tan</a><br>
-  Supervisors: <strong>Dr. Dominico Vito &amp; Dr. G. Fernandez</strong><br>
+    Aichu Tan</a>, Student, M.S. Big Data Analytics, San Diego State University<br>
+  Supervisors: Prof. Dominico Vito &amp; Prof. Gabriel Fernandez<br>
   Affiliation: 
   <a href="https://metabolismofcities-llab.org/metabolism-of-cities-living-lab-moc-llab/" target="_blank" style="color: teal; text-decoration: none;">
     Metabolism of Cities Living Lab
@@ -446,15 +446,13 @@ st.markdown("""
   <a href="https://www.sdsu.edu/" target="_blank" style="color: teal; text-decoration: none;">
     San Diego State University
   </a><br>
-  Presented at the <a href="https://onehealthconference.it/" target="_blank" style="color: teal; text-decoration: none;">
-  4th International One Health Conference, Rome Italy 2025</a>
-</div>
-""", unsafe_allow_html=True)
-
-
-st.markdown("""
-<div style='text-align:center; color: gray; font-size: 0.8em; margin-top: 1rem;'>
+  Presented at the 
+  <a href="https://onehealthconference.it/" target="_blank" style="color: teal; text-decoration: none;">
+    4th International One Health Conference, Rome, Italy 2025
+  </a><br><br>
   Licensed under the <a href="https://opensource.org/licenses/MIT" target="_blank" style="color: teal; text-decoration: none;">MIT License</a>
 </div>
 """, unsafe_allow_html=True)
+
+
 

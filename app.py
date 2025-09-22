@@ -5,14 +5,15 @@ import tempfile
 import streamlit as st
 import pandas as pd
 from PIL import Image, ImageOps
-
+print('test')
+print('test')
 # Your inference utils (unchanged import path)
 from utils.inference import detect_disease, get_all_disease_classes  # noqa: F401 (keep if you expose classes later)
 
 # ──────────────────────────────────────────────────────────────────────────────
 # PAGE CONFIG
 # ──────────────────────────────────────────────────────────────────────────────
-st.set_page_config(page_title="AI for Farmers", layout="wide")
+st.set_page_config(page_title="AI for Farmers", layout="wide", initial_sidebar_state="collapsed")
 
 # ──────────────────────────────────────────────────────────────────────────────
 # HELPERS & CACHES
@@ -143,14 +144,6 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-with st.container():
-    st.markdown("<div class='sticky-status'>", unsafe_allow_html=True)
-    s1, s2, s3 = st.columns(3)
-    s1.markdown(f"**① Upload** {'✅' if has_img else ''}")
-    s2.markdown(f"**② Detect** {'✅' if has_result else ''}")
-    s3.markdown(f"**③ Recommend** {'✅' if has_result else ''}")
-    st.markdown("</div>", unsafe_allow_html=True)
-
 
 # ──────────────────────────────────────────────────────────────────────────────
 # MAIN LAYOUT: STICKY LEFT (Wizard rail) + RIGHT (Tabs)
@@ -160,6 +153,33 @@ left, right = st.columns([0.32, 0.68], gap="large")
 # =========================
 # LEFT: Wizard (sticky)
 # =========================
+import io, os, zipfile
+
+# ──────────────────────────────────────────────────────────────────────────────
+# SAMPLE IMAGES LIST
+# ──────────────────────────────────────────────────────────────────────────────
+SAMPLES = {
+    "Anthracnose": "samples/anthracnose.jpg",
+    "Bacterial Blight": "samples/bacterial_blight.jpg",
+    "Brown Spot": "samples/brown_spot.jpg",
+    "Green Mite": "samples/green_mite.jpg",
+    "Gummosis": "samples/gumosis.jpg",
+    "Healthy Leaf 1": "samples/healthy1.jpg",
+    "Healthy Leaf 2": "samples/healthy2.jpg",
+    "Healthy Leaf 3": "samples/healthy3.jpg",
+    "Healthy Leaf 4": "samples/healthy4.jpg",
+    "Leaf Beetle": "samples/leaf_beetle.jpg",
+    "Leaf Blight": "samples/leaf_blight.jpg",
+    "Leaf Blight 2": "samples/leaf_blight2.jpg",
+    "Leaf Curl": "samples/leaf_curl.jpg",
+    "Leaf Miner": "samples/leaf_miner.jpg",
+    "Leaf Spot": "samples/leaf_spot.jpg",
+    "Mosaic": "samples/mosaic.jpg",
+    "Red Rust": "samples/red_rust.jpg",
+    "Septoria Leaf Spot": "samples/septoria_leaf_spot.jpg",
+    "Streak Virus": "samples/streak_virus.jpg",
+}
+
 with left:
     st.markdown("<div class='sticky-left'>", unsafe_allow_html=True)
 
@@ -190,6 +210,21 @@ with left:
                     image = ImageOps.exif_transpose(Image.open(img_file).convert("RGB"))
                     st.session_state["input_image"] = image
                     st.session_state["input_video"] = None
+                    
+                
+                st.caption("Or download our demo images:")              
+                st.markdown(
+                """
+                <a href="leaf_samples.zip\n" download>
+                    <button style="padding:6px 14px; background-color:teal; color:white; border:none; border-radius:6px;">
+                        Download sample pack (ZIP)
+                    </button>
+                </a>
+                """,
+                unsafe_allow_html=True,
+            )
+                
+
 
             else:
                 vid_file = st.file_uploader(
@@ -235,6 +270,8 @@ with left:
                     st.error(f"Detection failed: {e}")
                 st.session_state["detection_result"] = result
             st.toast("Detection complete", icon="✅")
+            
+
 
     # Helpful tips (collapsible)
     with st.expander("Tips for best results", expanded=False):
@@ -275,7 +312,7 @@ with right:
         with tab_preview:
             preview = st.session_state.get("input_image")
             if preview is not None:
-                st.image(preview, caption="Uploaded Image", width=400)
+                st.image(preview, caption="Uploaded Image", width=500)
             elif st.session_state.get("input_video") is not None:
                 st.video(st.session_state["input_video"])
                 st.info("Sample a frame on the left, then run detection.")
@@ -286,7 +323,7 @@ with right:
         with tab_detections:
             annotated = result.get("annotated_image")
             if annotated is not None:
-                st.image(annotated, caption="Detected Regions (YOLO)", width=400)
+                st.image(annotated, caption="Detected Regions (YOLO)", width= 500)
                 # Optional: render a detections table if your result provides it
                 dets = result.get("detections") or result.get("predictions")
                 if dets:
@@ -399,7 +436,7 @@ st.markdown("""
 <hr style="margin-top: 2rem; margin-bottom: 1rem;">
 <div style='text-align: center; color: gray; font-size: 0.85em; line-height: 1.6;'>
   © 2025 <strong>AI for Farmers</strong><br>
-  Author: <a href="https://aichutan.github.io/" target="_blank" style="color: teal; text-decoration: none;">
+  Author: <a href="https://www.linkedin.com/in/aichutan/" target="_blank" style="color: teal; text-decoration: none;">
   Aichu Tan</a><br>
   Supervisors: <strong>Dominico &amp; G. Fernandez</strong><br>
   Affiliation: 
@@ -420,5 +457,4 @@ st.markdown("""
   Licensed under the <a href="https://opensource.org/licenses/MIT" target="_blank" style="color: teal; text-decoration: none;">MIT License</a>
 </div>
 """, unsafe_allow_html=True)
-
 

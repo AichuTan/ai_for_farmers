@@ -153,6 +153,33 @@ left, right = st.columns([0.32, 0.68], gap="large")
 # =========================
 # LEFT: Wizard (sticky)
 # =========================
+import io, os, zipfile
+
+# ──────────────────────────────────────────────────────────────────────────────
+# SAMPLE IMAGES LIST
+# ──────────────────────────────────────────────────────────────────────────────
+SAMPLES = {
+    "Anthracnose": "samples/anthracnose.jpg",
+    "Bacterial Blight": "samples/bacterial_blight.jpg",
+    "Brown Spot": "samples/brown_spot.jpg",
+    "Green Mite": "samples/green_mite.jpg",
+    "Gummosis": "samples/gumosis.jpg",
+    "Healthy Leaf 1": "samples/healthy1.jpg",
+    "Healthy Leaf 2": "samples/healthy2.jpg",
+    "Healthy Leaf 3": "samples/healthy3.jpg",
+    "Healthy Leaf 4": "samples/healthy4.jpg",
+    "Leaf Beetle": "samples/leaf_beetle.jpg",
+    "Leaf Blight": "samples/leaf_blight.jpg",
+    "Leaf Blight 2": "samples/leaf_blight2.jpg",
+    "Leaf Curl": "samples/leaf_curl.jpg",
+    "Leaf Miner": "samples/leaf_miner.jpg",
+    "Leaf Spot": "samples/leaf_spot.jpg",
+    "Mosaic": "samples/mosaic.jpg",
+    "Red Rust": "samples/red_rust.jpg",
+    "Septoria Leaf Spot": "samples/septoria_leaf_spot.jpg",
+    "Streak Virus": "samples/streak_virus.jpg",
+}
+
 with left:
     st.markdown("<div class='sticky-left'>", unsafe_allow_html=True)
 
@@ -183,6 +210,19 @@ with left:
                     image = ImageOps.exif_transpose(Image.open(img_file).convert("RGB"))
                     st.session_state["input_image"] = image
                     st.session_state["input_video"] = None
+                    
+                
+                st.caption("Or download our demo images:")
+                st.markdown(
+                    """
+                    <a href="leaf_samples.zip" download>
+                        <button style="padding:6px 14px; background-color:teal; color:white; border:none; border-radius:6px;">
+                            Download sample pack (ZIP)
+                        </button>
+                    </a>
+                    """,
+                    unsafe_allow_html=True,
+                )
 
             else:
                 vid_file = st.file_uploader(
@@ -414,5 +454,3 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-
-#

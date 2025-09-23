@@ -438,7 +438,7 @@ st.markdown("""
   © 2025 <strong>AI for Farmers</strong><br>
   Author: <a href="https://www.linkedin.com/in/aichutan/" target="_blank" style="color: teal; text-decoration: none;">
     Aichu Tan</a>, Student, M.S. Big Data Analytics, San Diego State University<br>
-  Supervisors: Prof. Dominico Vito &amp; Prof. Gabriel Fernandez<br>
+  Supervisors: Dr. Dominico Vito &amp; Prof. Gabriel Fernandez<br>
   Affiliation: 
   <a href="https://metabolismofcities-llab.org/metabolism-of-cities-living-lab-moc-llab/" target="_blank" style="color: teal; text-decoration: none;">
     Metabolism of Cities Living Lab

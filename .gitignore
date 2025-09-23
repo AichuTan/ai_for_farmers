@@ -1,0 +1,18 @@
+# ignore environment file
+.env
+
+
+# ignore logo folder
+assets/
+
+# ignore best.pt previous version
+model/best_V1.pt
+model/best_V2.pt
+model/readme.txt
+
+
+utils/__pycache__/
+
+
+utils/langchain_agent.py 
+

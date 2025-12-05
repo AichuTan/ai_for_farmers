@@ -49,3 +49,4 @@ Tan, A., Vito, D., & Fernandez, G. AI for Farmers: A YOLO and Language Model-Bas
 ## **License**
 This project is licensed under the MIT License. See LICENSE for details.
 
+**Project Website:** https://aichutan.github.io/ai_for_farmers/

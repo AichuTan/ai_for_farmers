@@ -534,7 +534,7 @@ main {
 
 .figure-caption {
   font-size: 0.78rem;
-  color: #6b7280;
+  color: #ebedf1;
   margin-top: 0.45rem;
 }
 
@@ -616,7 +616,7 @@ tr:nth-child(even) {
 .card-contrast .card-subtitle,
 .card-contrast .card-note,
 .card-contrast .figure-caption {
-  color: #cbd5f5;
+  color: black;
 }
 
 .card-contrast .list {

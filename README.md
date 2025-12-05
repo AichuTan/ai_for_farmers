@@ -1,3 +1,6 @@
+**Project Website:** https://aichutan.github.io/ai_for_farmers/
+
+
 # AI for Farmers: Plant Disease Diagnosis & Advisory
 A Streamlit web app that detects plant diseases from images (YOLO-based backend) and provides farmer-friendly prevention and treatment guidance from a curated literature catalog (RAG-style preprocessing, offline at runtime).
 * Author: Aichu Tan, M.S. Big Data Analytics, San Diego State University
@@ -49,4 +52,3 @@ Tan, A., Vito, D., & Fernandez, G. AI for Farmers: A YOLO and Language Model-Bas
 ## **License**
 This project is licensed under the MIT License. See LICENSE for details.
 
-**Project Website:** https://aichutan.github.io/ai_for_farmers/

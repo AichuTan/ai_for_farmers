@@ -212,18 +212,15 @@ with left:
                     st.session_state["input_video"] = None
                     
                 
-                st.caption("Or download our demo images:")              
-                st.markdown(
-                """
-                <a href="leaf_samples.zip\n" download>
-                    <button style="padding:6px 14px; background-color:teal; color:white; border:none; border-radius:6px;">
-                        Download sample pack (ZIP)
-                    </button>
-                </a>
-                """,
-                unsafe_allow_html=True,
-            )
-                
+                st.caption("Or download our demo images:")
+                with open("samples/leaf_samples.zip", "rb") as f:
+                    st.download_button(
+                        label="⬇️ Download sample pack (ZIP)",
+                        data=f,
+                        file_name="leaf_samples.zip",
+                        mime="application/zip"
+                    )
+
 
 
             else:

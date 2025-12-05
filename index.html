@@ -19,7 +19,9 @@
             <div class="brand-avatar">AT</div>
             <div class="brand-text">
               <span class="brand-name">Aichu Tan</span>
-              <span class="brand-subtitle">AI &amp; Data for One Health</span>
+              <span class="brand-subtitle"
+                >AI for Farmers &amp; Data for One Health</span
+              >
             </div>
           </a>
           <nav class="nav-links">
@@ -42,53 +44,45 @@
         <div class="shell">
           <!-- Hero -->
           <section class="hero" id="top">
-            <div>
+            <!-- LEFT SIDE -->
+            <div class="hero-left">
+              <!-- Badges -->
               <div class="badge-row">
                 <span class="badge highlight">Peer-reviewed research</span>
-                <span class="badge">One Health</span>
-                <span class="badge">Smallholder farmers</span>
+                <a
+                  href="https://onehealthconference.it/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="badge badge-link"
+                >
+                  One Health Rome 2025
+                </a>
+                <a
+                  href="https://cop30.br/en"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="badge badge-link"
+                >
+                  COP30 Brazil 2025
+                </a>
               </div>
 
+              <!-- Title -->
               <h1 class="hero-title">
                 <span class="hero-gradient">AI for Farmers</span><br />
                 YOLOv8 + RAG for plant disease detection &amp; advisory
               </h1>
 
+              <!-- Subtitle -->
               <p class="hero-subtitle">
                 An open-source prototype that combines
                 <strong>YOLOv8</strong> for image-based plant disease detection
-                with a
-                <strong>retrieval-augmented advisory system</strong> built using
-                LangChain. Designed for smallholder farmers facing climate
-                stress, connectivity gaps, and pesticide risks.
+                with a <strong>retrieval-augmented advisory system</strong>
+                built using LangChain. Designed for smallholder farmers facing
+                climate stress, connectivity gaps, and pesticide risks.
               </p>
 
-              <div class="stat-row">
-                <div class="stat-pill">
-                  🌍 Presented at the
-                  <a
-                    href="https://onehealthconference.it/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    One Health International Conference 2025 (Rome)
-                  </a>
-                </div>
-                <div class="stat-pill">
-                  🌱 Showcased in climate discussions at
-                  <a
-                    href="https://cop30.br/en"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    COP30 – Brazil
-                  </a>
-                </div>
-                <div class="stat-pill">
-                  📚 Article under review at Springer Nature
-                </div>
-              </div>
-
+              <!-- CTAs -->
               <div class="hero-actions">
                 <a
                   class="btn btn-primary"
@@ -96,21 +90,25 @@
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <span class="dot">●</span> Try the live demo
+                  Try the live demo
                 </a>
+
                 <a
                   class="btn btn-outline"
                   href="assets/paper.pdf"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Read the full paper (PDF)
                 </a>
+
                 <a class="btn btn-outline" href="#architecture">
                   View system architecture
                 </a>
               </div>
             </div>
 
+            <!-- RIGHT SIDE SNAPSHOT CARD -->
             <aside class="hero-right">
               <div class="hero-right-inner">
                 <div class="hero-right-header">
@@ -132,15 +130,15 @@
                   </li>
                   <li>
                     <strong>My role:</strong> Conceptualization, methodology,
-                    software, analysis, data curation, visualization, writing
+                    software, analysis, visualization
                   </li>
                   <li>
                     <strong>Tech stack:</strong> YOLOv8m, LangChain, OpenAI
-                    embeddings, Streamlit, Roboflow, Hugging Face Spaces
+                    embeddings, Streamlit, Roboflow
                   </li>
                   <li>
-                    <strong>Demo:</strong> Offline-friendly advisory UI backed
-                    by a curated literature knowledge base
+                    <strong>Demo:</strong> Offline-friendly advisory UI built
+                    from curated agricultural literature
                   </li>
                 </ul>
 
@@ -353,57 +351,59 @@
                     </li>
                   </ul>
                 </div>
-                <div class="card card-contrast style="margin-top: 0.85rem">
-                <div class="card-title">2. Runtime operation</div>
-                <p class="card-subtitle">
-                  Turn an image into a tailored advisory
-                </p>
-                <ul class="list">
-                  <li>
-                    Farmer uploads a plant leaf image through the web app.
-                  </li>
-                  <li>YOLOv8m detects bounding boxes and disease classes.</li>
-                  <li>
-                    The advisory module matches disease labels to catalog
-                    entries.
-                  </li>
-                  <li>
-                    Farmer receives prevention &amp; treatment guidance in real
-                    time.
-                  </li>
-                </ul>
+
+                <div class="card card-contrast" style="margin-top: 0.85rem">
+                  <div class="card-title">2. Runtime operation</div>
+                  <p class="card-subtitle">
+                    Turn an image into a tailored advisory
+                  </p>
+                  <ul class="list">
+                    <li>
+                      Farmer uploads a plant leaf image through the web app.
+                    </li>
+                    <li>YOLOv8m detects bounding boxes and disease classes.</li>
+                    <li>
+                      The advisory module matches disease labels to catalog
+                      entries.
+                    </li>
+                    <li>
+                      Farmer receives prevention &amp; treatment guidance in
+                      real time.
+                    </li>
+                  </ul>
+                </div>
               </div>
-            </div>
 
-            <div>
-              <div class="card card-contrast">
-                <div class="card-title">Architecture at a glance</div>
-                <p class="card-subtitle">System architecture (Figure)</p>
+              <div>
+                <div class="card card-contrast">
+                  <div class="card-title">Architecture at a glance</div>
+                  <p class="card-subtitle">System architecture (Figure)</p>
 
-                <p class="card-note">
-                  Offline preprocessing (LLM summarization &amp; embeddings)
-                  builds the disease catalog; at runtime, YOLOv8 detects plant
-                  diseases and the retrieval module delivers farmer-friendly
-                  advisory guidance.
-                </p>
+                  <p class="card-note">
+                    Offline preprocessing (LLM summarization &amp; embeddings)
+                    builds the disease catalog; at runtime, YOLOv8 detects plant
+                    diseases and the retrieval module delivers farmer-friendly
+                    advisory guidance.
+                  </p>
 
-                <img
-                  src="assets/architecture.png"
-                  alt="AI for Farmers system architecture with offline preprocessing and runtime YOLOv8 + advisory flow"
-                  class="figure-img"
-                />
+                  <img
+                    src="assets/architecture.png"
+                    alt="AI for Farmers system architecture with offline preprocessing and runtime YOLOv8 + advisory flow"
+                    class="figure-img"
+                  />
 
-                <p class="figure-caption">
-                  Offline LLM summarization &amp; embeddings → disease catalog →
-                  YOLOv8 detection → retrieval-based advisory guidance delivered
-                  to farmers.
-                </p>
+                  <p class="figure-caption">
+                    Offline LLM summarization &amp; embeddings → disease catalog
+                    → YOLOv8 detection → retrieval-based advisory guidance
+                    delivered to farmers.
+                  </p>
 
-                <div class="chip-row" style="margin-top: 0.6rem">
-                  <span class="chip accent">LangChain pipelines</span>
-                  <span class="chip">Local vector DB</span>
-                  <span class="chip">Streamlit front-end</span>
-                  <span class="chip">Hugging Face Spaces deployment</span>
+                  <div class="chip-row" style="margin-top: 0.6rem">
+                    <span class="chip accent">LangChain pipelines</span>
+                    <span class="chip">Local vector DB</span>
+                    <span class="chip">Streamlit front-end</span>
+                    <span class="chip">Hugging Face Spaces deployment</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -651,17 +651,19 @@
             </div>
 
             <div class="section-body section-grid two">
-              <div>
+              <!-- LEFT COLUMN -->
+              <div class="advisory-left">
                 <p>
                   The advisory module turns technical literature into
                   <strong>short, clear, and safe</strong> guidance for farmers.
                   Each disease entry is generated using structured prompts that:
                 </p>
+
                 <ul class="list">
                   <li>
                     Require at least
-                    <strong>two non-chemical measures</strong> before any
-                    chemical options.
+                    <strong>two non-chemical measures</strong> before chemical
+                    options.
                   </li>
                   <li>
                     Restrict chemical advice to
@@ -676,117 +678,35 @@
                     label reminders.
                   </li>
                 </ul>
+
                 <p>
                   This design keeps the system
                   <strong
                     >predictable, auditable, and aligned with integrated pest
                     management (IPM)</strong
                   >
-                  principles, while still providing practical last-resort
-                  chemical options when needed.
+                  principles, while still offering practical last-resort
+                  chemical options.
                 </p>
               </div>
-              <!-- RIGHT COLUMN: screenshot card -->
-              <div>
-                <div class="card">
-                  <div class="card-title">Example advisory output</div>
-                  <p class="card-subtitle">
-                    Tomato – Septoria leaf spot (prevention &amp; treatment)
-                  </p>
 
-                  <img
-                    src="assets/advisory.png"
-                    alt="Screenshot of advisory output showing prevention and treatment guidance for tomato Septoria leaf spot"
-                    class="figure-img"
-                  />
+              <!-- RIGHT COLUMN: side-by-side prevention/treatment -->
 
-                  <p class="card-note">
-                    Generated from curated tomato disease literature, then
-                    post-processed to simplify terminology and standardize
-                    phrasing for low-literacy and future multilingual
-                    adaptation.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <!-- Impact -->
-          <section class="section" id="impact">
-            <hr class="methods-divider" />
-            <div class="section-header">
-              <div>
-                <div class="section-kicker">Impact &amp; future work</div>
-                <h2 class="section-title">
-                  AI for climate-resilient, One Health-aligned agriculture
-                </h2>
+              <!-- TREATMENT CARD -->
+              <div class="advisory-demo-card">
+                <img
+                  src="assets/treatment.png"
+                  alt="Treatment guidance example for tomato Septoria leaf spot"
+                  class="demo-image"
+                />
               </div>
             </div>
 
-            <div class="section-body section-grid two">
-              <div>
-                <p>
-                  This prototype shows how
-                  <strong
-                    >computer vision + retrieval-augmented generation</strong
-                  >
-                  can be combined into a practical tool for smallholder farmers.
-                  Beyond accuracy, the architecture is deliberately designed to
-                  reinforce One Health:
-                </p>
-                <ul class="list">
-                  <li>
-                    <strong>Fewer hazardous sprays:</strong> Non-chemical
-                    measures are prioritized, with careful safeguards on
-                    chemical advice.
-                  </li>
-                  <li>
-                    <strong>Healthier farmers &amp; households:</strong>
-                    Reduced exposure to toxic pesticides, plus clearer PPE
-                    guidance.
-                  </li>
-                  <li>
-                    <strong>Protected ecosystems:</strong> Less contamination of
-                    waterways, soils, and beneficial insects.
-                  </li>
-                  <li>
-                    <strong>More stable yields:</strong> Earlier detection and
-                    better management support food security and nutrition.
-                  </li>
-                  <li>
-                    <strong>Equity &amp; access:</strong> Offline-friendly
-                    design and open-source code support underserved communities.
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <div class="card card-contrast">
-                  <div class="card-title">What’s next?</div>
-                  <ul class="list">
-                    <li>
-                      Extend coverage beyond cashew, cassava, maize, and tomato.
-                    </li>
-                    <li>
-                      Field-test the prototype with farmers and extension
-                      officers.
-                    </li>
-                    <li>
-                      Add multilingual and low-literacy features (audio,
-                      icon-based guidance).
-                    </li>
-                    <li>
-                      Explore upgrading the detection module to newer YOLO
-                      variants (e.g., YOLOv11) for even better real-time
-                      performance.
-                    </li>
-                    <li>
-                      Integrate with broader climate and health datasets to
-                      strengthen One Health monitoring.
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+            <!-- FOOTNOTE -->
+            <p class="demo-note">
+              Generated from curated tomato disease literature and standardized
+              for clarity, low literacy, and future multilingual adaptation.
+            </p>
           </section>
 
           <!-- Credits -->

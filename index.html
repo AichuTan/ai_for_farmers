@@ -15,7 +15,7 @@
       <!-- Top Nav -->
       <header class="navbar">
         <div class="navbar-inner">
-          <a href="#" class="brand">
+          <a href="https://aichutan.github.io/" class="brand">
             <div class="brand-avatar">AT</div>
             <div class="brand-text">
               <span class="brand-name">Aichu Tan</span>
@@ -23,17 +23,16 @@
             </div>
           </a>
           <nav class="nav-links">
-            <!-- Update hrefs to match your portfolio -->
-            <a href="/index.html#projects" class="pill-link"
-              >Back to Portfolio</a
-            >
+            <a href="https://aichutan.github.io/#projects" class="pill-link">
+              ← Back to portfolio
+            </a>
             <a
               href="https://huggingface.co/spaces/aycu2004/ai_for_farmer"
               target="_blank"
               rel="noopener noreferrer"
               class="pill-link accent"
             >
-              Live Demo
+              Live demo on Hugging Face
             </a>
           </nav>
         </div>
@@ -66,10 +65,28 @@
 
               <div class="stat-row">
                 <div class="stat-pill">
-                  🌍 One Health International Conference, Rome (Sep 30–Oct 2,
-                  2025)
+                  🌍 Presented at the
+                  <a
+                    href="https://onehealthconference.it/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    One Health International Conference 2025 (Rome)
+                  </a>
                 </div>
-                <div class="stat-pill">📚 Under review at Springer Nature</div>
+                <div class="stat-pill">
+                  🌱 Showcased in climate discussions at
+                  <a
+                    href="https://cop30.br/en"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    COP30 – Brazil
+                  </a>
+                </div>
+                <div class="stat-pill">
+                  📚 Article under review at Springer Nature
+                </div>
               </div>
 
               <div class="hero-actions">
@@ -81,11 +98,15 @@
                 >
                   <span class="dot">●</span> Try the live demo
                 </a>
+                <a
+                  class="btn btn-outline"
+                  href="assets/paper.pdf"
+                  target="_blank"
+                >
+                  Read the full paper (PDF)
+                </a>
                 <a class="btn btn-outline" href="#architecture">
                   View system architecture
-                </a>
-                <a class="btn btn-outline" href="#impact">
-                  See One Health impact
                 </a>
               </div>
             </div>
@@ -94,19 +115,8 @@
               <div class="hero-right-inner">
                 <div class="hero-right-header">
                   <div>
-                    <div style="font-size: 0.8rem; color: white">
-                      Project snapshot
-                    </div>
-                    <div
-                      style="
-                        font-size: 0.95rem;
-                        font-weight: 500;
-                        margin-top: 0.2rem;
-                        color: white;
-                      "
-                    >
-                      AI for Farmers Prototype
-                    </div>
+                    <div class="hero-label">Project snapshot</div>
+                    <div class="hero-name">AI for Farmers Prototype</div>
                   </div>
                   <span class="tag-chip">4 crops · 20 diseases</span>
                 </div>
@@ -125,7 +135,7 @@
                     software, analysis, data curation, visualization, writing
                   </li>
                   <li>
-                    <strong>Tech Stack:</strong> YOLOv8m, LangChain, OpenAI
+                    <strong>Tech stack:</strong> YOLOv8m, LangChain, OpenAI
                     embeddings, Streamlit, Roboflow, Hugging Face Spaces
                   </li>
                   <li>
@@ -146,6 +156,7 @@
 
           <!-- Problem & Context -->
           <section class="section" id="context">
+            <hr class="methods-divider" />
             <div class="section-header">
               <div>
                 <div class="section-kicker">
@@ -183,7 +194,7 @@
                 </p>
               </div>
               <div>
-                <div class="card">
+                <div class="card card-contrast">
                   <div class="card-title">Design goals</div>
                   <p class="card-subtitle">
                     What this project set out to build
@@ -223,6 +234,7 @@
 
           <!-- Solution Overview -->
           <section class="section" id="overview">
+            <hr class="methods-divider" />
             <div class="section-header">
               <div>
                 <div class="section-kicker">Solution</div>
@@ -267,9 +279,9 @@
               </div>
 
               <div>
-                <div class="card">
+                <div class="card card-contrast">
                   <div class="card-title">Detection vs advisory modules</div>
-                  <div class="section-grid two">
+                  <div class="section-grid two tight">
                     <div>
                       <p class="card-subtitle">Detection module (YOLOv8m)</p>
                       <ul class="list">
@@ -293,8 +305,8 @@
                     </div>
                   </div>
                   <div class="highlight-box" style="margin-top: 0.75rem">
-                    <strong>Key difference from existing apps:</strong> the
-                    system is <em>open source</em>,
+                    <strong>Key difference from existing apps:</strong>
+                    the system is <em>open source</em>,
                     <em>literature-grounded</em>, and designed to run with
                     limited connectivity, supporting transparency and local
                     adaptation.
@@ -306,6 +318,7 @@
 
           <!-- Architecture -->
           <section class="section" id="architecture">
+            <hr class="methods-divider" />
             <div class="section-header">
               <div>
                 <div class="section-kicker">System architecture</div>
@@ -317,11 +330,11 @@
 
             <div class="section-body section-grid two">
               <div>
-                <div class="card">
+                <div class="card card-contrast">
                   <div class="card-title">1. Offline preprocessing</div>
-                  <div class="card-subtitle">
+                  <p class="card-subtitle">
                     Build a structured disease knowledge base
-                  </div>
+                  </p>
                   <ul class="list">
                     <li>
                       Curate agricultural extension manuals &amp; scientific
@@ -340,60 +353,57 @@
                     </li>
                   </ul>
                 </div>
-                <div class="card" style="margin-top: 0.85rem">
-                  <div class="card-title">2. Runtime operation</div>
-                  <div class="card-subtitle">
-                    Turn an image into a tailored advisory
-                  </div>
-                  <ul class="list">
-                    <li>
-                      Farmer uploads a plant leaf image through the web app.
-                    </li>
-                    <li>YOLOv8m detects bounding boxes and disease classes.</li>
-                    <li>
-                      The advisory module matches disease labels to catalog
-                      entries.
-                    </li>
-                    <li>
-                      Farmer receives prevention &amp; treatment guidance in
-                      real time.
-                    </li>
-                  </ul>
-                </div>
+                <div class="card card-contrast style="margin-top: 0.85rem">
+                <div class="card-title">2. Runtime operation</div>
+                <p class="card-subtitle">
+                  Turn an image into a tailored advisory
+                </p>
+                <ul class="list">
+                  <li>
+                    Farmer uploads a plant leaf image through the web app.
+                  </li>
+                  <li>YOLOv8m detects bounding boxes and disease classes.</li>
+                  <li>
+                    The advisory module matches disease labels to catalog
+                    entries.
+                  </li>
+                  <li>
+                    Farmer receives prevention &amp; treatment guidance in real
+                    time.
+                  </li>
+                </ul>
               </div>
+            </div>
 
-              <div>
-                <div class="card">
-                  <div class="card-title">Architecture at a glance</div>
-                  <p class="card-subtitle">
-                    Figure-based visualization placeholder
-                  </p>
-                  <p style="font-size: 0.83rem; color: var(--text-muted)">
-                    Replace this placeholder with your system diagram (Figure 3
-                    from the paper).
-                  </p>
-                  <div
-                    style="
-                      border-radius: 1rem;
-                      border: 1px dashed rgba(148, 163, 184, 0.6);
-                      padding: 1rem;
-                      text-align: center;
-                      font-size: 0.8rem;
-                      color: var(--text-muted);
-                      margin-top: 0.5rem;
-                    "
-                  >
-                    <em>[ system-architecture.png ]</em><br />
-                    Offline LLM summarization &amp; embedding → disease catalog
-                    → YOLOv8 detection → retrieval-based advisory
-                  </div>
+            <div>
+              <div class="card card-contrast">
+                <div class="card-title">Architecture at a glance</div>
+                <p class="card-subtitle">System architecture (Figure)</p>
 
-                  <div class="chip-row" style="margin-top: 0.8rem">
-                    <span class="chip accent">LangChain pipelines</span>
-                    <span class="chip">Local vector DB</span>
-                    <span class="chip">Streamlit front-end</span>
-                    <span class="chip">Hugging Face Spaces deployment</span>
-                  </div>
+                <p class="card-note">
+                  Offline preprocessing (LLM summarization &amp; embeddings)
+                  builds the disease catalog; at runtime, YOLOv8 detects plant
+                  diseases and the retrieval module delivers farmer-friendly
+                  advisory guidance.
+                </p>
+
+                <img
+                  src="assets/architecture.png"
+                  alt="AI for Farmers system architecture with offline preprocessing and runtime YOLOv8 + advisory flow"
+                  class="figure-img"
+                />
+
+                <p class="figure-caption">
+                  Offline LLM summarization &amp; embeddings → disease catalog →
+                  YOLOv8 detection → retrieval-based advisory guidance delivered
+                  to farmers.
+                </p>
+
+                <div class="chip-row" style="margin-top: 0.6rem">
+                  <span class="chip accent">LangChain pipelines</span>
+                  <span class="chip">Local vector DB</span>
+                  <span class="chip">Streamlit front-end</span>
+                  <span class="chip">Hugging Face Spaces deployment</span>
                 </div>
               </div>
             </div>
@@ -401,6 +411,7 @@
 
           <!-- Dataset & Training -->
           <section class="section" id="dataset">
+            <hr class="methods-divider" />
             <div class="section-header">
               <div>
                 <div class="section-kicker">Dataset &amp; training</div>
@@ -424,7 +435,7 @@
                   <li>4 crops: cashew, cassava, maize, tomato.</li>
                   <li>Train/val/test split: 92% / 4% / 4% (Roboflow).</li>
                   <li>
-                    Data augmentation (~3x) via flipping, cropping, and ±10%
+                    Data augmentation (~3×) via flipping, cropping, and ±10%
                     photometric adjustments.
                   </li>
                 </ul>
@@ -435,7 +446,7 @@
                 </p>
               </div>
               <div>
-                <div class="card">
+                <div class="card card-contrast">
                   <div class="card-title">Training configuration</div>
                   <div class="key-facts">
                     <div>
@@ -443,13 +454,48 @@
                     </div>
                     <div><span class="label">Image size:</span> 640×640</div>
                     <div>
-                      <span class="label">Epochs:</span> 60 (metrics reported at
-                      epoch 50 to avoid overfitting)
+                      <span class="label">Epochs:</span> 60
+                      <span class="muted"
+                        >(metrics reported at epoch 50 to avoid
+                        overfitting)</span
+                      >
                     </div>
                     <div><span class="label">Batch size:</span> 16</div>
                     <div>
                       <span class="label">Hardware:</span> NVIDIA Tesla T4 (15
                       GB VRAM), CUDA 12.4
+                    </div>
+                  </div>
+
+                  <div
+                    class="section-grid two tight"
+                    style="margin-top: 0.9rem"
+                  >
+                    <div>
+                      <div class="mini-figure-card">
+                        <img
+                          src="assets/trainingloss.png"
+                          alt="YOLOv8 training and validation loss curves"
+                          class="figure-img"
+                        />
+                        <p class="figure-caption">
+                          Training and validation loss curves showing onset of
+                          overfitting after epoch 50.
+                        </p>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="mini-figure-card">
+                        <img
+                          src="assets/yolo_metrics.png"
+                          alt="YOLOv8 precision, recall and mAP metrics across epochs"
+                          class="figure-img"
+                        />
+                        <p class="figure-caption">
+                          Precision, recall and mAP trends across epochs,
+                          highlighting the chosen checkpoint.
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -459,6 +505,7 @@
 
           <!-- Results -->
           <section class="section" id="results">
+            <hr class="methods-divider" />
             <div class="section-header">
               <div>
                 <div class="section-kicker">Results</div>
@@ -504,7 +551,7 @@
 
               <div class="section-grid two" style="margin-top: 1.25rem">
                 <div>
-                  <div class="card">
+                  <div class="card card-contrast">
                     <div class="card-title">Class-wise highlights</div>
                     <p class="card-subtitle">
                       Performance varies by symptom distinctiveness
@@ -552,52 +599,38 @@
                       </tbody>
                     </table>
 
-                    <p style="font-size: 0.8rem; margin-top: 0.65rem">
+                    <p class="card-note" style="margin-top: 0.65rem">
                       The model excels on
                       <strong>visually distinctive diseases</strong> (e.g.,
                       Cassava mosaic, Cashew red rust), while performance drops
                       on diseases with
-                      <strong>overlapping or subtle symptoms</strong> (e.g.,
-                      Cassava brown spot, Maize leaf spot), highlighting future
-                      work on data augmentation and class rebalancing.
+                      <strong>overlapping or subtle symptoms</strong>
+                      (e.g., Cassava brown spot, Maize leaf spot), highlighting
+                      future work on data augmentation and class rebalancing.
                     </p>
                   </div>
                 </div>
 
                 <div>
-                  <div class="card">
+                  <div class="card card-contrast">
                     <div class="card-title">
                       Representative detection outputs
                     </div>
                     <p class="card-subtitle">
                       From qualitative examples to full validation set coverage
                     </p>
-                    <p style="font-size: 0.83rem; color: var(--text-muted)">
-                      Replace this placeholder with your detection montage
-                      (Figure 4.2 / Appendix B).
-                    </p>
-                    <div
-                      style="
-                        border-radius: 1rem;
-                        border: 1px dashed rgba(148, 163, 184, 0.6);
-                        padding: 1rem;
-                        text-align: center;
-                        font-size: 0.8rem;
-                        color: var(--text-muted);
-                        margin-top: 0.5rem;
-                      "
-                    >
-                      <em>[ detection-examples.png ]</em><br />
-                      Bounding boxes show predicted disease classes and
-                      confidence scores for cashew, cassava, maize, and tomato.
-                    </div>
-                    <p style="font-size: 0.8rem; margin-top: 0.65rem">
-                      In example images, YOLOv8 correctly localizes:
-                      <br />
-                      • Cassava mosaic (confidence ≈ 0.99)<br />
-                      • Leaf miner damage on cassava with multiple lesions<br />
-                      • Maize leaf blight lesions (confidence ≈ 0.80)<br />
-                      • Tomato Septoria leaf spot (confidence = 1.00)
+
+                    <img
+                      src="assets/detection.png"
+                      alt="Representative YOLOv8 detection outputs with bounding boxes for cashew, cassava, maize and tomato"
+                      class="figure-img"
+                    />
+
+                    <p class="figure-caption">
+                      YOLOv8 detections on cashew, cassava, maize, and tomato
+                      validation images, illustrating both single- and
+                      multi-lesion cases and separation of healthy vs diseased
+                      leaves.
                     </p>
                   </div>
                 </div>
@@ -607,6 +640,7 @@
 
           <!-- Advisory System -->
           <section class="section" id="advisory">
+            <hr class="methods-divider" />
             <div class="section-header">
               <div>
                 <div class="section-kicker">Advisory system</div>
@@ -652,33 +686,25 @@
                   chemical options when needed.
                 </p>
               </div>
+              <!-- RIGHT COLUMN: screenshot card -->
               <div>
                 <div class="card">
-                  <div class="example-label">Example advisory output</div>
-                  <div class="example-block">
-                    === Tomato – Septoria Leaf Spot === === Prevention === -
-                    Plant resistant tomato varieties. - Space plants for good
-                    air circulation. - Remove and destroy infected leaves early.
-                    - Mulch to reduce soil splash. - Rotate tomatoes with
-                    unrelated crops. - Inspect weekly for early symptoms. ===
-                    Treatment === Non-chemical: - Remove infected leaves and
-                    stems. - Improve spacing and airflow. Chemical (last
-                    option): - Copper fungicide — when: first signs appear;
-                    interval: every 7–10 days; note: follow label instructions
-                    and wear PPE. Seek help when: - The disease continues to
-                    spread despite these steps.
-                  </div>
-                  <p
-                    style="
-                      font-size: 0.78rem;
-                      color: var(--text-muted);
-                      margin-top: 0.45rem;
-                    "
-                  >
+                  <div class="card-title">Example advisory output</div>
+                  <p class="card-subtitle">
+                    Tomato – Septoria leaf spot (prevention &amp; treatment)
+                  </p>
+
+                  <img
+                    src="assets/advisory.png"
+                    alt="Screenshot of advisory output showing prevention and treatment guidance for tomato Septoria leaf spot"
+                    class="figure-img"
+                  />
+
+                  <p class="card-note">
                     Generated from curated tomato disease literature, then
                     post-processed to simplify terminology and standardize
-                    phrasing for low-literacy and multilingual adaptation in
-                    future versions.
+                    phrasing for low-literacy and future multilingual
+                    adaptation.
                   </p>
                 </div>
               </div>
@@ -687,6 +713,7 @@
 
           <!-- Impact -->
           <section class="section" id="impact">
+            <hr class="methods-divider" />
             <div class="section-header">
               <div>
                 <div class="section-kicker">Impact &amp; future work</div>
@@ -714,8 +741,9 @@
                     chemical advice.
                   </li>
                   <li>
-                    <strong>Healthier farmers &amp; households:</strong> Reduced
-                    exposure to toxic pesticides, plus clearer PPE guidance.
+                    <strong>Healthier farmers &amp; households:</strong>
+                    Reduced exposure to toxic pesticides, plus clearer PPE
+                    guidance.
                   </li>
                   <li>
                     <strong>Protected ecosystems:</strong> Less contamination of
@@ -732,7 +760,7 @@
                 </ul>
               </div>
               <div>
-                <div class="card">
+                <div class="card card-contrast">
                   <div class="card-title">What’s next?</div>
                   <ul class="list">
                     <li>
@@ -763,6 +791,7 @@
 
           <!-- Credits -->
           <section class="section" id="credits">
+            <hr class="methods-divider" />
             <div class="section-header">
               <div>
                 <div class="section-kicker">Credits &amp; links</div>
@@ -774,7 +803,7 @@
 
             <div class="section-body section-grid two">
               <div>
-                <div class="card">
+                <div class="card card-contrast">
                   <div class="card-title">Authors &amp; contributions</div>
                   <div class="key-facts" style="margin-top: 0.35rem">
                     <div>
@@ -804,9 +833,15 @@
                 </div>
               </div>
               <div>
-                <div class="card">
+                <div class="card card-contrast">
                   <div class="card-title">Resources</div>
                   <ul class="list">
+                    <li>
+                      <strong>Portfolio:</strong>
+                      <a href="https://aichutan.github.io/" target="_blank"
+                        >aichutan.github.io</a
+                      >
+                    </li>
                     <li>
                       <strong>Live prototype:</strong>
                       <a
@@ -817,25 +852,34 @@
                       >
                     </li>
                     <li>
-                      <strong>Conference:</strong> One Health International
-                      Conference, Rome, Italy (Sep 30–Oct 2, 2025)
+                      <strong>Full paper (PDF):</strong>
+                      <a href="assets/paper.pdf" target="_blank"
+                        >AI for Farmers – manuscript</a
+                      >
                     </li>
                     <li>
-                      <strong>Code &amp; data:</strong> Open-source
-                      implementation; CCMT dataset available via Mendeley Data.
+                      <strong>Conference presentation (PDF):</strong>
+                      <a href="assets/presentation.pdf" target="_blank"
+                        >Rome 2025 slide deck</a
+                      >
                     </li>
                     <li>
-                      <strong>Status:</strong> Full article under review at
-                      Springer Nature.
+                      <strong>Poster:</strong>
+                      <a href="assets/poster.png" target="_blank"
+                        >Conference poster (PNG)</a
+                      >
+                    </li>
+                    <li>
+                      <strong>Conference:</strong>
+                      <a
+                        href="https://onehealthconference.it/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >4th International One Health Conference, Rome, 2025</a
+                      >
                     </li>
                   </ul>
-                  <p
-                    style="
-                      font-size: 0.78rem;
-                      color: var(--text-muted);
-                      margin-top: 0.5rem;
-                    "
-                  >
+                  <p class="card-note" style="margin-top: 0.5rem">
                     Acknowledgements: Metabolism of Cities Living Lab (SDSU),
                     UENR Ghana (CCMT dataset), and tooling from Roboflow,
                     LangChain, Ultralytics YOLOv8, OpenAI, Streamlit, and
@@ -846,24 +890,23 @@
             </div>
           </section>
         </div>
-      </main>
 
-      <footer class="footer">
-        <div class="footer-inner">
-          <span
-            >© <span id="year"></span> Aichu Tan. AI for Farmers · One
-            Health.</span
-          >
-          <span
-            >Back to
-            <a href="https://aichutan.github.io/">portfolio home</a></span
-          >
-        </div>
-      </footer>
+        <!-- Footer -->
+        <footer class="footer">
+          <div class="footer-inner">
+            <span>
+              © <span id="year"></span> Aichu Tan · AI for Farmers · One Health.
+            </span>
+            <span>
+              Back to
+              <a href="https://aichutan.github.io/">portfolio home</a>
+            </span>
+          </div>
+        </footer>
+      </main>
     </div>
 
     <script>
-      // Simple year helper
       document.getElementById("year").textContent = new Date().getFullYear();
     </script>
   </body>

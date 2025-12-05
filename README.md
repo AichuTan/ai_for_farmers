@@ -18,7 +18,7 @@ A Streamlit web app that detects plant diseases from images (YOLO-based backend)
 
 ## **Demo**
 Hugging Face (prototype): https://huggingface.co/spaces/aycu2004/ai_for_farmer
-Note: Local setup is recommended for best performance and to use your own model weights.
+
 
 ## **How It Works**
 1. Detection detect_disease(image) (in utils/inference.py) runs the detector (e.g., YOLOv8) and returns predicted disease, confidence, and optional annotated image/detections.

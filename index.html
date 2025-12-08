@@ -1,229 +1,259 @@
-<link rel="stylesheet" href="style_web.css" />
+<head>
+  <link rel="stylesheet" href="style_web.css" />
+</head>
+<body>
+  <section id="ai-for-farmers" class="project-section">
+    <div class="project-header">
+      <p class="project-label">Featured AI Project</p>
+      <h2>AI for Farmers: Plant Disease Detection & Advisory System</h2>
+      <p class="project-tagline">
+        Open-source YOLOv8 + LangChain RAG app that helps smallholder farmers
+        detect plant diseases and get safe, farmer-friendly treatment advice.
+      </p>
 
-<section id="ai-for-farmers" class="project-section">
-  <div class="project-header">
-    <p class="project-label">Featured AI Project</p>
-    <h2>AI for Farmers: Plant Disease Detection & Advisory System</h2>
-    <p class="project-tagline">
-      Open-source YOLOv8 + LangChain RAG app that helps smallholder farmers
-      detect plant diseases and get safe, farmer-friendly treatment advice.
-    </p>
+      <div class="project-links">
+        <a
+          href="https://huggingface.co/spaces/aycu2004/ai_for_farmer"
+          target="_blank"
+          rel="noopener"
+          class="btn btn-primary"
+        >
+          Live Demo
+        </a>
+
+        <a
+          href="assets/poster.png"
+          target="_blank"
+          rel="noopener"
+          class="btn btn-ghost"
+        >
+          Poster (PNG)
+        </a>
+
+        <a
+          href="assets/paper.pdf"
+          target="_blank"
+          rel="noopener"
+          class="btn btn-ghost"
+        >
+          Manuscript
+          <span class="tag-review">Under Review · Springer Nature</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Top two-column overview -->
+    <div class="project-grid">
+      <div class="project-col">
+        <h3>Problem & Impact</h3>
+        <ul class="bullet-list">
+          <li>
+            Up to <strong>40% of global crop yield</strong> is lost to pests and
+            diseases.
+          </li>
+          <li>
+            Smallholder farmers often lack fast, affordable plant disease
+            diagnostics.
+          </li>
+          <li>
+            Overuse of pesticides harms human health, ecosystems, and soil.
+          </li>
+        </ul>
+        <p class="summary-text">
+          This project uses AI to bring
+          <strong>fast, offline-friendly diagnosis</strong> and
+          <strong>evidence-based advice</strong> directly to farmers in
+          low-connectivity regions.
+        </p>
+      </div>
+
+      <div class="project-col">
+        <h3>What I Built</h3>
+        <ul class="bullet-list">
+          <li>
+            Trained a <strong>YOLOv8m object detector</strong> on
+            <strong>13,519 images</strong> (20 disease classes) from the CCMT
+            dataset.
+          </li>
+          <li>
+            Designed a <strong>retrieval-augmented advisory module</strong> with
+            LangChain that turns extension manuals and papers into
+            farmer-friendly guidance.
+          </li>
+          <li>
+            Deployed a
+            <strong>Streamlit web app on Hugging Face Spaces</strong> so users
+            can upload leaf images and instantly get disease + treatment
+            suggestions.
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Metrics cards -->
+    <div class="metrics-row" aria-label="Model performance metrics">
+      <div class="metric-card">
+        <span class="metric-label">Precision</span>
+        <span class="metric-value">0.852</span>
+        <span class="metric-caption">@ epoch 50</span>
+      </div>
+      <div class="metric-card">
+        <span class="metric-label">Recall</span>
+        <span class="metric-value">0.862</span>
+        <span class="metric-caption">20 classes</span>
+      </div>
+      <div class="metric-card">
+        <span class="metric-label">mAP@50</span>
+        <span class="metric-value">0.894</span>
+        <span class="metric-caption">Detection quality</span>
+      </div>
+      <div class="metric-card">
+        <span class="metric-label">mAP@50–95</span>
+        <span class="metric-value">0.745</span>
+        <span class="metric-caption">COCO-style metric</span>
+      </div>
+    </div>
+
+    <!-- Skills + System Flow -->
+    <div class="project-grid bottom-grid">
+      <div class="project-col">
+        <h3>My Role & Skills</h3>
+        <p class="summary-text">
+          End-to-end ownership from data and modeling to deployment:
+        </p>
+        <ul class="bullet-list">
+          <li>Data curation, annotation, and class balancing in Roboflow.</li>
+          <li>Model training & evaluation with Ultralytics YOLOv8.</li>
+          <li>
+            Design of the retrieval-augmented advisory workflow with LangChain.
+          </li>
+          <li>
+            Prompt engineering for safe, non-chemical-first recommendations.
+          </li>
+          <li>Streamlit UI + Hugging Face Spaces deployment.</li>
+        </ul>
+
+        <div class="skill-tag-group">
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">YOLOv8</span>
+          <span class="skill-tag">Computer Vision</span>
+          <span class="skill-tag">LangChain</span>
+          <span class="skill-tag">RAG</span>
+          <span class="skill-tag">LLMs</span>
+          <span class="skill-tag">Streamlit</span>
+          <span class="skill-tag">Hugging Face Spaces</span>
+          <span class="skill-tag">Data Annotation</span>
+        </div>
+      </div>
+
+      <div class="project-col">
+        <h3>System Flow</h3>
+        <ol class="flow-list">
+          <li>
+            <strong>1. Upload</strong> – Farmer uploads a plant leaf photo via
+            Streamlit UI.
+          </li>
+          <li>
+            <strong>2. Detect</strong> – YOLOv8 locates diseased regions and
+            classifies the crop–disease type in real time.
+          </li>
+          <li>
+            <strong>3. Retrieve</strong> – Identified disease is used to query a
+            local vector database built from extension manuals and scientific
+            PDFs.
+          </li>
+          <li>
+            <strong>4. Generate Advice</strong> – LangChain assembles concise
+            prevention and treatment tips, prioritizing non-chemical options.
+          </li>
+          <li>
+            <strong>5. Deliver</strong> – Clean, bullet-point guidance is
+            displayed in the app, designed for low-bandwidth, low-literacy
+            environments.
+          </li>
+        </ol>
+      </div>
+    </div>
 
     <div class="project-links">
-      <a
-        href="https://huggingface.co/spaces/aycu2004/ai_for_farmer"
-        target="_blank"
-        rel="noopener"
-        class="btn btn-primary"
-      >
-        Live Demo
-      </a>
-
-      <a
-        href="assets/poster.png"
-        target="_blank"
-        rel="noopener"
-        class="btn btn-ghost"
-      >
-        Poster (PNG)
-      </a>
-
-      <a
-        href="assets/paper.pdf"
-        target="_blank"
-        rel="noopener"
-        class="btn btn-ghost"
-      >
-        Manuscript
-        <span class="tag-review">Under Review · Springer Nature</span>
-      </a>
-    </div>
-  </div>
-
-  <!-- Top two-column overview -->
-  <div class="project-grid">
-    <div class="project-col">
-      <h3>Problem & Impact</h3>
-      <ul class="bullet-list">
-        <li>
-          Up to <strong>40% of global crop yield</strong> is lost to pests and
-          diseases.
-        </li>
-        <li>
-          Smallholder farmers often lack fast, affordable plant disease
-          diagnostics.
-        </li>
-        <li>Overuse of pesticides harms human health, ecosystems, and soil.</li>
-      </ul>
-      <p class="summary-text">
-        This project uses AI to bring
-        <strong>fast, offline-friendly diagnosis</strong> and
-        <strong>evidence-based advice</strong> directly to farmers in
-        low-connectivity regions.
-      </p>
-    </div>
-
-    <div class="project-col">
-      <h3>What I Built</h3>
-      <ul class="bullet-list">
-        <li>
-          Trained a <strong>YOLOv8m object detector</strong> on
-          <strong>13,519 images</strong> (20 disease classes) from the CCMT
-          dataset.
-        </li>
-        <li>
-          Designed a <strong>retrieval-augmented advisory module</strong> with
-          LangChain that turns extension manuals and papers into farmer-friendly
-          guidance.
-        </li>
-        <li>
-          Deployed a
-          <strong>Streamlit web app on Hugging Face Spaces</strong> so users can
-          upload leaf images and instantly get disease + treatment suggestions.
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- Metrics cards -->
-  <div class="metrics-row" aria-label="Model performance metrics">
-    <div class="metric-card">
-      <span class="metric-label">Precision</span>
-      <span class="metric-value">0.852</span>
-      <span class="metric-caption">@ epoch 50</span>
-    </div>
-    <div class="metric-card">
-      <span class="metric-label">Recall</span>
-      <span class="metric-value">0.862</span>
-      <span class="metric-caption">20 classes</span>
-    </div>
-    <div class="metric-card">
-      <span class="metric-label">mAP@50</span>
-      <span class="metric-value">0.894</span>
-      <span class="metric-caption">Detection quality</span>
-    </div>
-    <div class="metric-card">
-      <span class="metric-label">mAP@50–95</span>
-      <span class="metric-value">0.745</span>
-      <span class="metric-caption">COCO-style metric</span>
-    </div>
-  </div>
-
-  <!-- Skills + System Flow -->
-  <div class="project-grid bottom-grid">
-    <div class="project-col">
-      <h3>My Role & Skills</h3>
-      <p class="summary-text">
-        End-to-end ownership from data and modeling to deployment:
-      </p>
-      <ul class="bullet-list">
-        <li>Data curation, annotation, and class balancing in Roboflow.</li>
-        <li>Model training & evaluation with Ultralytics YOLOv8.</li>
-        <li>
-          Design of the retrieval-augmented advisory workflow with LangChain.
-        </li>
-        <li>
-          Prompt engineering for safe, non-chemical-first recommendations.
-        </li>
-        <li>Streamlit UI + Hugging Face Spaces deployment.</li>
-      </ul>
-
-      <div class="skill-tag-group">
-        <span class="skill-tag">Python</span>
-        <span class="skill-tag">YOLOv8</span>
-        <span class="skill-tag">Computer Vision</span>
-        <span class="skill-tag">LangChain</span>
-        <span class="skill-tag">RAG</span>
-        <span class="skill-tag">LLMs</span>
-        <span class="skill-tag">Streamlit</span>
-        <span class="skill-tag">Hugging Face Spaces</span>
-        <span class="skill-tag">Data Annotation</span>
-      </div>
-    </div>
-
-    <div class="project-col">
-      <h3>System Flow</h3>
-      <ol class="flow-list">
-        <li>
-          <strong>1. Upload</strong> – Farmer uploads a plant leaf photo via
-          Streamlit UI.
-        </li>
-        <li>
-          <strong>2. Detect</strong> – YOLOv8 locates diseased regions and
-          classifies the crop–disease type in real time.
-        </li>
-        <li>
-          <strong>3. Retrieve</strong> – Identified disease is used to query a
-          local vector database built from extension manuals and scientific
-          PDFs.
-        </li>
-        <li>
-          <strong>4. Generate Advice</strong> – LangChain assembles concise
-          prevention and treatment tips, prioritizing non-chemical options.
-        </li>
-        <li>
-          <strong>5. Deliver</strong> – Clean, bullet-point guidance is
-          displayed in the app, designed for low-bandwidth, low-literacy
-          environments.
-        </li>
-      </ol>
-    </div>
-  </div>
-
-  <div class="project-links">
-    <div class="visual-card">
-      <h3>Architecture</h3>
-      <img
-        src="assets/architecture.png"
-        alt="AI for Farmers system architecture showing offline LLM summarization and runtime YOLOv8 plus retrieval workflow"
-        class="visual-image"
-      />
-      <p class="visual-caption">
-        The architecture has two stages. In the <strong>offline stage</strong>,
-        agricultural PDF manuals are summarized by an LLM and converted into a
-        structured CSV knowledge base (crop, disease, symptoms, treatment,
-        prevention). In the <strong>runtime stage</strong>, a farmer uploads a
-        leaf photo; YOLOv8 detects the crop and disease class, a retrieval
-        module matches that class in the knowledge base, and the LLM returns
-        farmer-friendly treatment and prevention guidance.
-      </p>
-    </div>
-
-    <div class="project-visuals">
       <div class="visual-card">
-        <h3>Sample YOLO Detection Output</h3>
+        <h3>Architecture</h3>
         <img
-          src="assets/detection.png"
-          alt="YOLOv8 detection results on cashew, cassava, maize, and tomato leaves with bounding boxes and disease labels"
+          src="assets/architecture.png"
+          alt="AI for Farmers system architecture showing offline LLM summarization and runtime YOLOv8 plus retrieval workflow"
           class="visual-image"
         />
         <p class="visual-caption">
-          Example detection results from <strong>YOLOv8</strong> on the crop
-          dataset. The model localizes diseased regions on cashew, cassava,
-          maize, and tomato leaves, draws bounding boxes, and assigns a
-          predicted disease class with confidence scores. These predicted
-          classes become the key used by the retrieval module to look up
-          matching records in the structured knowledge base.
+          The architecture has two stages. In the
+          <strong>offline stage</strong>, agricultural PDF manuals are
+          summarized by an LLM and converted into a structured CSV knowledge
+          base (crop, disease, symptoms, treatment, prevention). In the
+          <strong>runtime stage</strong>, a farmer uploads a leaf photo; YOLOv8
+          detects the crop and disease class, a retrieval module matches that
+          class in the knowledge base, and the LLM returns farmer-friendly
+          treatment and prevention guidance.
         </p>
       </div>
 
-      <div class="visual-card">
-        <h3>Sample LLM Output</h3>
-        <img
-          src="assets/treatment.png"
-          alt="Sample treatment and prevention guidance for Septoria leaf spot generated by the LLM"
-          class="visual-image"
-        />
-        <p class="visual-caption">
-          Example of the <strong>text output</strong> generated for a tomato
-          leaf diagnosed as <strong>Septoria Leaf Spot</strong>. Given the
-          detected disease class, the system retrieves the relevant entry from
-          the knowledge base and uses an LLM to format it into clear guidance:
-          non-chemical and chemical treatment steps, early warning signs, and
-          when to seek expert help. The language is simplified and organized
-          into bullet points so that farmers can quickly act on the advice.
-        </p>
+      <div class="project-visuals">
+        <div class="visual-card">
+          <h3>Sample YOLO Detection Output</h3>
+          <img
+            src="assets/detection.png"
+            alt="YOLOv8 detection results on cashew, cassava, maize, and tomato leaves with bounding boxes and disease labels"
+            class="visual-image"
+          />
+          <p class="visual-caption">
+            Example detection results from <strong>YOLOv8</strong> on the crop
+            dataset. The model localizes diseased regions on cashew, cassava,
+            maize, and tomato leaves, draws bounding boxes, and assigns a
+            predicted disease class with confidence scores. These predicted
+            classes become the key used by the retrieval module to look up
+            matching records in the structured knowledge base.
+          </p>
+          <p class="dataset-credit">
+            Images Credit: Crop Pest and Disease Detection Dataset (CCMT)
+          </p>
+        </div>
+
+        <div class="visual-card">
+          <h3>Sample LLM Output</h3>
+          <img
+            src="assets/treatment.png"
+            alt="Sample treatment and prevention guidance for Septoria leaf spot generated by the LLM"
+            class="visual-image"
+          />
+          <p class="visual-caption">
+            Example of the <strong>text output</strong> generated for a tomato
+            leaf diagnosed as <strong>Septoria Leaf Spot</strong>. Given the
+            detected disease class, the system retrieves the relevant entry from
+            the knowledge base and uses an LLM to format it into clear guidance:
+            non-chemical and chemical treatment steps, early warning signs, and
+            when to seek expert help. The language is simplified and organized
+            into bullet points so that farmers can quickly act on the advice.
+          </p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+    <footer class="footer footer--dark">
+      <div class="container footer__content">
+        <div class="footer__info">
+          <p class="footer__role">
+            <br />
+            © 2025 · M.S. Big Data Analytics · San Diego State University
+          </p>
+        </div>
+
+        <nav class="footer__links" aria-label="Footer navigation">
+          <a
+            href="https://www.linkedin.com/in/aichutan/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+        </nav>
+      </div>
+    </footer>
+  </section>
+</body>
